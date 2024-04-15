@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Iniciar sesión</h2>
+    <form (ngSubmit)="login()">
+      <input type="text" name="usuario" placeholder="Correo" required [(ngModel)]="user">
+      <input type="password" name="contraseña" placeholder="Contraseña" required [(ngModel)]="Password">
+      <input type="submit" value="Iniciar sesión" >
+    
+        @if (errorLogin) {
+          <div class="error"> Datos incorrectos</div>
+        }
+    </form>
+  </div>
