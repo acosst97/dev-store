@@ -21,7 +21,7 @@ export class ClienteComponent {
   // Propiedad para almacenar los datos de las cuentas
   cuentas$ = this.cuentasService.findUser();
 
-  // Método para mostrar la data (puedes modificar este método según tus necesidades)
+  
   mostrarData() {
     this.cuentas$.subscribe(data => {
       console.log("mis datos cliente", data); // O haz algo con los datos recibidos
