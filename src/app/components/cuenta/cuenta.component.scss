@@ -1,83 +1,65 @@
-.dashboard {
-    display: flex;
-    height: 100vh;
-  .menu-item{
-    padding-left: 5%;
-  }
-    .lista{
-      text-decoration: none;
-      color: aqua;
-      font-size: 18px;
-    }
+// .dashboard {
+//     display: flex;
+//     height: 100vh;
+//   .menu-item{
+//     padding-left: 5%;
+//   }
+//     .lista{
+//       text-decoration: none;
+//       color: aqua;
+//       font-size: 18px;
+//     }
 
-  }
-  .sidebar {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-  }
+//   }
+//   .sidebar {
+//     width: 250px;
+//     background-color: #333;
+//     color: #fff;
+//   }
   
-  .logo {
-    padding: 20px;
-    font-size: 24px;
-  }
+//   .logo {
+//     padding: 20px;
+//     font-size: 24px;
+//   }
   
-  .menu {
-    list-style: none;
-    padding: 0;
-  }
+//   .menu {
+//     list-style: none;
+//     padding: 0;
+//   }
   
-  .menu li {
-    padding: 10px 20px;
-  }
+//   .menu li {
+//     padding: 10px 20px;
+//   }
   
   
   
-  .menu li a:hover {
-    background-color: #880101;
-  }
+//   .menu li a:hover {
+//     background-color: #880101;
+//   }
   
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
+  
+.content {
+  position: absolute;
+  top: 0;
+  left: 340px;
+  right: 0;
+  bottom: 0;
+}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .menu-item {
-    margin-bottom: 20px;
-  }
-  
-  .user-form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
+
   
   label {
     display: block;
     margin-bottom: 5px;
+    color: white;
   }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    width: calc(100% - 20px);
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button[type="submit"] {
+   
+   
+ .items-button{
+  display: flex;
+  gap: 12px;
+    button[type="submit"],
+    button[type="reset"]{
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -86,8 +68,10 @@
     border-radius: 3px;
     cursor: pointer;
   }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
+ }
+
+
+//   button[type="submit"]:hover {
+//     background-color: #0056b3;
+//   }
 

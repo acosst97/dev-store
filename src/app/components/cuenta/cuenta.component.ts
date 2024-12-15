@@ -18,7 +18,9 @@ export class CuentaComponent {
   constructor(private cuentasService: CuentasService) { }
   
   agregarUsuario() {
+    
     this.cuentasService.createUser(this.nuevoUsuario).subscribe(() => {
+  
       console.log('Usuario creado exitosamente', this.nuevoUsuario);
       this.usercreate = true
       // Puedes realizar alguna acción adicional después de crear el usuario, como limpiar el formulario o redirigir a otra página

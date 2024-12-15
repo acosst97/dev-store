@@ -1,12 +1,82 @@
-<div class="container">
-    <h2>Iniciar sesión</h2>
-    <form (ngSubmit)="login()">
-      <input type="text" name="usuario" placeholder="Correo" required [(ngModel)]="user">
-      <input type="password" name="contraseña" placeholder="Contraseña" required [(ngModel)]="Password">
-      <input type="submit" value="Iniciar sesión" >
-    
-        @if (errorLogin) {
-          <div class="error"> Datos incorrectos</div>
-        }
-    </form>
+
+
+<header>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="navbar-logo">
+     <h1> Sistem Park</h1>
+    </div>
+    <!-- Menú de navegación -->
+    <ul class="navbar-menu">
+
+      <li><a  (click)="showSection('portafolio')">Portafolio</a></li>
+      <li><a (click)="showSection('quienes-somos')">Quienes somos</a></li>
+      <li><a (click)="showSection('contactenos')">Contactenos</a></li>
+      <li><a  (click)="showSection('ingresar')">Ingresar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="portafolio" *ngIf="currentSection === 'portafolio'">
+  <div class="cont">
+  <h2>SistemPark</h2>
+  <h1> Atracciones y Eventos</h1>
+  <div class="items">
+    <div class="item">
+      <div class="img"></div>
+      <p>$ 20,000</p>
+      <p>Muro de Escala</p>
+    </div>
+    <div class="item">
+      <div class="img2"></div>
+      <p>$ 10,000</p>
+      <p>Tobogan</p>
+    </div>
+    <div class="item">
+      <div class="img3"></div>
+      <p>$ 40,000</p>
+      <p>Piscina de pelotas</p>
+    </div>
+  </div>
+  </div>
+</div>
+<div id="quienes-somos" *ngIf="currentSection === 'quienes-somos'"></div>
+<div id="contactenos" *ngIf="currentSection === 'contactenos'"></div>
+<div id="ingresar" *ngIf="currentSection === 'ingresar'"></div>
+
+
+
+<!--* *login y refistro -->
+<div  *ngIf="currentSection === 'ingresar'" class="container">
+  <div class="select-item">
+    <button 
+      [ngClass]="{'btn-general active': viewLogin, 'btn-general': !viewLogin}" 
+      (click)="changueView(true)">Ingresar
+    </button>
+    <button 
+      [ngClass]="{'btn-general active': !viewLogin, 'btn-general': viewLogin}" 
+      (click)="changueView(false)">Registrarse
+    </button>
+  </div>
+  
+  <h2 style="color: aliceblue;">{{viewLogin ? 'Iniciar sesión' : 'Registrarse'}}</h2>
+  <!-- Formulario de login -->
+  <form *ngIf="viewLogin" (ngSubmit)="login()" class="form">
+    <input class="clean-input" type="text" name="usuario" placeholder="Correo" required [(ngModel)]="user">
+    <input class="clean-input" type="password" name="contraseña" placeholder="Contraseña" required [(ngModel)]="Password">
+    <button class="btn-general" type="submit" value="Ingresar">Ingresar</button>
+  
+    <!-- Error de login -->
+    <div *ngIf="errorLogin" class="error">Datos incorrectos</div>
+  </form>
+  
+  <!-- Formulario de registro -->
+  <form *ngIf="!viewLogin" (submit)="agregarUsuario()"class="form" >
+    <input class="clean-input" type="text" name="usuario" placeholder="nombre Usuario" required >
+    <input class="clean-input" type="text" name="telefono" placeholder="telefono " required >
+    <input class="clean-input" type="text" name="correo" placeholder="correo" required>
+    <input class="clean-input" type="password" name="contraseña" placeholder="Contraseña" required>
+
+    <button class="btn-general" type="submit" value="Ingresar">Registrarse</button>
+  </form>
   </div>

@@ -1,44 +1,51 @@
 
 
-
-
-<div class="dashboard">
-  <div class="sidebar">
-    <div class="logo">Logo</div>
-    <ul class="menu">
-      <div class="menu-item">
-        <div class="menu-item">
-          <a class="registro" [routerLink]="['/cuenta']" routerLinkActive="active" >Registrar Nuevo Usuario</a>
-        </div>
+<div class="sidebar">
+  <div class="menu-title">Atracciones</div>
+  <ul class="menu-items">   
       
-      </div>
-    </ul>
-  </div>
-  <div class="content">
-    <!-- Contenido de la página -->
-    <h1>Contenido</h1>
-    <p>Bienvenido al dashboard</p>
+    <li><a [routerLink]="['/clientes']">Cliente</a></li>
+    <li><a [routerLink]="['/cuenta']">Cuenta</a></li>
+      <li><a href="#">Modificar</a></li>
+      <li><a href="#">Cancelar</a></li>
+      <!-- <app-cliente></app-cliente>
+      <app-cuenta></app-cuenta>  -->
+  </ul>
 
-    <div class="container">
-       
-  <div class="user"> Aqui encontraras  la lista de los clientes Registrados</div>
-  <table id="table">
-   <thead class="thead-light">
-     <tr>
-       <th>Nombre</th>
-       <th>correo</th>
-     </tr>
-   </thead>
-   <tbody class="data">
-     <!-- Utiliza ngFor para iterar sobre la lista de usuarios y mostrar la información en cada fila -->
-     <tr *ngFor="let usuario of cuentas$ | async; let i = index">
-       <td>{{ usuario.nombre }}</td>
-       <td>{{ usuario.correo }}</td>
-       <button type="button" class="buttom" (click)="eliminarUsuario(usuario.idCliente)"> Eliminar </button>
-     </tr>
-   </tbody>
- </table>
-   
-    </div>
+  <div class="menu-title">Evento</div>
+  <ul class="menu-items">
+      <li><a href="#">Reservar</a></li>
+      <li><a href="#">Modificar</a></li>
+      <li><a href="#">Cancelar</a></li>
+  </ul>
+
+  <div class="logout">
+      <a href="#">Cerrar sesión</a>
+  </div>
+</div>
+  
+
+<div class="content">
+  <!-- Contenido de la página -->
+ 
+  <div class="container">
+<div class="user"> Aqui encontraras  la lista de los clientes Registrados</div>
+<table id="table">
+ <thead class="thead-light">
+   <tr>
+     <th>Nombre</th>
+     <th>correo</th>
+   </tr>
+ </thead>
+ <tbody class="data">
+   <!-- Utiliza ngFor para iterar sobre la lista de usuarios y mostrar la información en cada fila -->
+   <tr *ngFor="let usuario of cuentas$ | async; let i = index">
+     <td>{{ usuario.nombre }}</td>
+     <td>{{ usuario.correo }}</td>
+     <button type="button" class="buttom" (click)="eliminarUsuario(usuario.idCliente)"> Eliminar </button>
+   </tr>
+ </tbody>
+</table>
+ 
   </div>
 </div>

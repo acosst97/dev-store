@@ -1,1 +1,7 @@
-<p>modal works!</p>
+<div *ngIf="showModal" class="modal" [ngStyle]="{'width': width, 'height': height}">
+    <div class="modal-content">
+      <!-- Aquí va el contenido del modal -->
+      <span class="close" (click)="closeModal()">&#10006;</span>
+      <p>Este es el contenido del modal</p>
+    </div>
+  </div>
