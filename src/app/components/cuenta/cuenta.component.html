@@ -4,7 +4,7 @@
   <ul class="menu-items">   
       
     <li><a [routerLink]="['/clientes']">Cliente</a></li>
-    <li><a [routerLink]="['/cuenta']">Cuenta</a></li>
+    <li><a [routerLink]="['/cuenta']">Reservacion</a></li>
       <li><a href="#">Modificar</a></li>
       <li><a href="#">Cancelar</a></li>
       <!-- <app-cliente></app-cliente>
@@ -23,9 +23,6 @@
   </div>
 </div>
   
-
-
-
   <div class="content">
     <!-- Contenido de la página -->
     <div class="container">
@@ -55,7 +52,7 @@
                </div>
       </form>
       @if (usercreate) {
-        <div> Se ha creado el Usuario Correctamente</div>
+        <div style="color: white; font-size: 24px;"> Se ha creado el Usuario Correctamente</div>
       }
     </div>
   </div>

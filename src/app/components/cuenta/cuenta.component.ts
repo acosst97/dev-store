@@ -23,7 +23,7 @@ export class CuentaComponent {
   
       console.log('Usuario creado exitosamente', this.nuevoUsuario);
       this.usercreate = true
-      // Puedes realizar alguna acción adicional después de crear el usuario, como limpiar el formulario o redirigir a otra página
+  
     });
   }
  

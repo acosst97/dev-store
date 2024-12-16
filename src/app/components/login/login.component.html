@@ -62,8 +62,8 @@
   <h2 style="color: aliceblue;">{{viewLogin ? 'Iniciar sesión' : 'Registrarse'}}</h2>
   <!-- Formulario de login -->
   <form *ngIf="viewLogin" (ngSubmit)="login()" class="form">
-    <input class="clean-input" type="text" name="usuario" placeholder="Correo" required [(ngModel)]="user">
-    <input class="clean-input" type="password" name="contraseña" placeholder="Contraseña" required [(ngModel)]="Password">
+    <input class="clean-input" type="text" name="usuario" placeholder="Correo" required [(ngModel)]="data.UsuarioLogin">
+    <input class="clean-input" type="password" name="contraseña" placeholder="Contraseña" required [(ngModel)]="data.password">
     <button class="btn-general" type="submit" value="Ingresar">Ingresar</button>
   
     <!-- Error de login -->

@@ -5,7 +5,7 @@
   <ul class="menu-items">   
       
     <li><a [routerLink]="['/clientes']">Cliente</a></li>
-    <li><a [routerLink]="['/cuenta']">Cuenta</a></li>
+    <li><a [routerLink]="['/cuenta']">Reservacion</a></li>
       <li><a href="#">Modificar</a></li>
       <li><a href="#">Cancelar</a></li>
       <!-- <app-cliente></app-cliente>
@@ -22,19 +22,17 @@
   <div class="logout">
       <a href="#">Cerrar sesión</a>
   </div>
-</div>
-  
-
 <div class="content">
   <!-- Contenido de la página -->
- 
+
   <div class="container">
 <div class="user"> Aqui encontraras  la lista de los clientes Registrados</div>
-<table id="table">
- <thead class="thead-light">
-   <tr>
-     <th>Nombre</th>
-     <th>correo</th>
+<table id="table" >
+ <thead  class="thead-light">
+   <tr style="color: white;">
+     <th>Personas</th>
+     <th>Fecha Reservacion</th>
+     <th>Acciones </th>
    </tr>
  </thead>
  <tbody class="data">
